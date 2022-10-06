@@ -1,0 +1,20 @@
+const liczba1 = document.querySelector("#liczba1")
+const liczba2 = document.querySelector("#liczba2")
+const liczba3 = document.querySelector("#liczba3")
+const liczba4 = document.querySelector("#liczba4")
+const przeliczBt = document.querySelector("#przelicz")
+console.dir(liczba1)
+console.dir(liczba2)
+console.dir(liczba3)
+console.dir(liczba4)
+
+przeliczBt.addEventListener('click', () => {
+    var sum = liczba1.value+liczba2.value+liczba3.value+liczba4.value
+    var max = Math.min(liczba1, liczba2, liczba3, liczba4)
+    var min = Math.max(liczba1, liczba2, liczba3, liczba4)
+    console.log(sum)
+    console.log()
+    console.log(max)
+    console.log(min)
+})
+//Math.max(), .min()
