@@ -1,24 +1,22 @@
-labconst main = document.querySelector('main')
-const timeoutRef = setTimeout(
-    () => {
-        main.innerHTML="From setTimeout"
-    },
-    2000
-)
-let licznik = 0
-const intervalRef = setInterval(
-    () => {
-        main.innerHTML="From setInterval" + licznik++
-    },
-    4000
-);
+let slideIndex = 1;
+showSlides(slideIndex);
 
-//kasujemy timeoutRef
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
 
-clearInterval(timeoutRef)
-
-//kasujemy setInterval
-
-clearTimeout(intervalRef)
-
-//window.requestAnimationframe
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("slide");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
