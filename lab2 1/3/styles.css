@@ -1,0 +1,16 @@
+*{
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+}
+
+.karuzela{
+  width: 40%;
+  margin: auto;
+}
+
+.slajd{
+  display:flex;
+  height:500px;
+  width:100%;
+}
