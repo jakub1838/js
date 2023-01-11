@@ -1,0 +1,8 @@
+canvas{
+    background-color: white;
+    background-position: center;
+    background-size: 100% 100%;
+    margin: auto;
+    display: block;
+    border: 1px solid black;
+  }
