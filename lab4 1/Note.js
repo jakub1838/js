@@ -58,12 +58,12 @@ export class Note {
         buttons.classList.add("buttons");
 
         this.editButton = document.createElement("button");
-        this.editButton.innerHTML = "Edit";
+        this.editButton.innerHTML = "Edytuj";
         this.editButton.addEventListener("click", this.edit.bind(this));
         buttons.appendChild(this.editButton);
 
         const deleteButton = document.createElement("button");
-        deleteButton.innerHTML = "Delete";
+        deleteButton.innerHTML = "Usuń";
         deleteButton.addEventListener("click", this.remove.bind(this));
         buttons.appendChild(deleteButton);
 
@@ -76,9 +76,9 @@ export class Note {
         this.title.toggleAttribute("disabled");
         if (!this.editButton.classList.contains("edit")) {
             this.editButton.classList.add("edit");
-            this.editButton.innerHTML = "Save";
+            this.editButton.innerHTML = "Zapisz";
         } else {
-            this.editButton.innerHTML = "Edit";
+            this.editButton.innerHTML = "Edytuj";
             this.editButton.classList.remove("edit");
         }
     }

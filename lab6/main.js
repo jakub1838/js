@@ -10,7 +10,7 @@ const setup = () => {
     let tboard = new Board(canvas.height, canvas.width, context);
     let ball = new Ball(canvas.width/2, canvas.height/2, 10);
     tboard.add(ball);
-    tboard.addManyHoles(5);
+    tboard.addManyHoles(3);
     return tboard;
 }
 

@@ -9,6 +9,7 @@ const asyncAdd = async (a, b) => {
     })
 }
 
+//Generator liczb
 function generator(number) {
     let results = [];
     for (let i = 0; i < number; i++) {
@@ -16,6 +17,7 @@ function generator(number) {
     }
     return results;
 }
+
 
 async function start(numbers) {
     let result = 0;
