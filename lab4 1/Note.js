@@ -12,7 +12,7 @@ export class Note {
         this.title = document.createElement("input");
         this.title.type = "text";
         this.title.classList.add("title");
-        this.title.placeholder = "Title";
+        this.title.placeholder = "Tytuł";
         this.title.disabled = true;
         this.title.value = title ?? "";
         this.note.appendChild(this.title);

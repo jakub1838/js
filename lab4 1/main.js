@@ -17,6 +17,7 @@ addEventListener("load", () => {
 //przypięte notatki
 addEventListener("pinNote", (event) => {
   const note = event.detail;
+  storage.togglePin(note);
   if (storage.pinnedNotes.includes(note)) {
     renderPinned(note);
   } else {
@@ -29,6 +30,12 @@ document.querySelector("#add").addEventListener("click", () => {
   const newNote = new Note();
   storage.add(newNote);
   renderNote(newNote);
+});
+
+//usuń notatkę
+addEventListener("removeNote", (event) => {
+  const note = event.detail;
+  storage.remove(note);
 });
 
 //notatki
